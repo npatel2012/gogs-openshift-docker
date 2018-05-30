@@ -253,7 +253,7 @@ objects:
     resources:
       requests:
         storage: ${GOGS_VOLUME_CAPACITY}
-    storageClassName: gluster-container
+    storageClassName: glusterfs-storage
 - kind: PersistentVolumeClaim
   apiVersion: v1
   metadata:
@@ -266,7 +266,7 @@ objects:
     resources:
       requests:
         storage: ${DB_VOLUME_CAPACITY}
-    storageClassName: gluster-container
+    storageClassName: glusterfs-storage
 - kind: ConfigMap
   apiVersion: v1
   metadata:
